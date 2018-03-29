@@ -5,6 +5,6 @@ export function min() {
   return Math.min();
 }
 
-export function copyObject() {
+export function copy() {
 
 }
