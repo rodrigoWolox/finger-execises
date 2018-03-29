@@ -1,5 +1,10 @@
-function foo() {
-  return 1;
+import isArray from './utils';
+
+export function min() {
+  isArray();
+  return Math.min();
 }
 
-export default foo;
+export function copyObject() {
+
+}
