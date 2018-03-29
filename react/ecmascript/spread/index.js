@@ -1,4 +1,3 @@
-// import isArray from './utils';
 import { isArray } from './utils';
 
 export function min() {
