@@ -1,6 +1,6 @@
 import pow from '.';
 
-describe('pow function', () => {
+describe('01 - matchers', () => {
   xit('pow returns the power based on two numeric arguments', () => {
     pow();
   });
