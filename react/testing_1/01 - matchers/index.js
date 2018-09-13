@@ -1,13 +1,13 @@
 import { isArray, mapPairArray } from './utils';
 
-function pow(...arg) {
-  if (!isArray(arg) || arg.length < 2) {
+function pow(...args) {
+  if (!isArray(args) || args.length < 2) {
     return undefined;
   }
-  if (arg.length === 2 && !isArray(arg[0]) && !isArray(arg[1])) {
-    return arg[0] ** arg[1];
+  if (args.length === 2 && !isArray(args[0]) && !isArray(args[1])) {
+    return args[0] ** args[1];
   }
-  return arg.map(mapPairArray);
+  return args.map(mapPairArray);
 }
 
 export default pow;
