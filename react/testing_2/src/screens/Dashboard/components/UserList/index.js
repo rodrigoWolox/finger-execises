@@ -6,7 +6,7 @@ import './styles.css';
 function UserList ({users}) {
   return (
     <div className={`user-list`}>
-      {users.map(user => <UserRow user={user} />)}
+      {users && users.map(user => <UserRow user={user} key={user.id} />)}
     </div>
   );
 }
