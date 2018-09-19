@@ -11,9 +11,11 @@ class UserRow extends Component {
 
   render() {
     return (
-      <div class={`user-row ${this.state.isActive ? '' : 'toggle-off'}`}>
+      <div className={`user-row ${this.state.isActive ? '' : 'toggle-off'}`}>
         <h3>{this.props.user.name}</h3>
-        <Toggle initialToggledOn={this.state.isActive} onToggle={this.toggleActive} />
+        <Toggle onToggle={this.toggleActive}>
+          {this.state.isActive ? 'Desactivar' : 'Activar'}
+        </Toggle>
       </div>
     );
   }

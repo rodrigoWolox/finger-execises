@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-import UserRow from './components/UserRow';
-
 import logo from './logo.svg';
 import './styles.css';
 import { DATA } from './constants';
+import UserList from './components/UserList';
 
 class Dashboard extends Component {
 
@@ -18,7 +17,7 @@ class Dashboard extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        {DATA.map(user => <UserRow user={user} />)}
+        <UserList users={DATA} />
       </div>
     );
   }
