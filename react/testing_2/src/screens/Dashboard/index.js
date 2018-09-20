@@ -6,7 +6,10 @@ import { DATA } from './constants';
 import UserList from './components/UserList';
 
 class Dashboard extends Component {
-
+  state = { users: [] };
+  componentDidMount() {
+    this.setState({ users: DATA });
+  }
   render() {
     return (
       <div className="App">
@@ -18,7 +21,7 @@ class Dashboard extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <UserList users={DATA} />
+        <UserList users={this.state.users} />
       </div>
     );
   }

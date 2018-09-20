@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import Toggle from '../../../../components/Toggle';
-
 import './styles.css';
 
 class UserRow extends Component {
@@ -13,9 +11,11 @@ class UserRow extends Component {
     return (
       <div className={`user-row ${this.state.isActive ? '' : 'toggle-off'}`}>
         <h3>{this.props.user.name}</h3>
-        <Toggle onToggle={this.toggleActive}>
-          {this.state.isActive ? 'Desactivar' : 'Activar'}
-        </Toggle>
+        <div className="toggle">
+          <button onClick={this.toggleActive}>
+            {this.state.isActive ? 'Desactivar' : 'Activar'}
+          </button>
+        </div>
       </div>
     );
   }
