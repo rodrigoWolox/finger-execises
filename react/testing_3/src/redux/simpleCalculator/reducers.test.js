@@ -1,0 +1,17 @@
+import reducer from './reducer'
+
+import { actions } from './actions'
+
+describe('Recuder --- Test simple calculator reducer', () => {
+    it('Reducer for ADD action', () => {
+        let state = { calculatorValue: 10 }
+        state = reducer(state, { type: actions.ADD })
+        expect(state).toEqual({ calculatorValue: 11 })
+    });
+
+    it('Reducer for SUBSTRACT action', () => {
+        let state = { calculatorValue: 10 }
+        state = reducer(state, { type: actions.SUBSTRACT })
+        expect(state).toEqual({ calculatorValue: 9 })
+    });
+});
