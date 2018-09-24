@@ -1,12 +1,12 @@
-import { actionTypes } from "./actions";
+import { actions } from "./actions";
 
 const initialState = { calculatorValue: 0 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case actionTypes.ADD:
+    case actions.ADD:
       return { ...state, calculatorValue: state.calculatorValue + 1 };
-    case actionTypes.SUBSTRACT:
+    case actions.SUBSTRACT:
       return { ...state, calculatorValue: state.calculatorValue - 1 };
     default:
       return state;

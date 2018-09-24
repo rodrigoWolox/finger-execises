@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { simpleCalculatorActions } from "../../../redux/simpleCalculator/actions";
+import actionCreators from "../../../redux/simpleCalculator/actions";
 
 import SimpleCalculator from "./layout";
 
@@ -23,10 +23,10 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   add: () => {
-    dispatch(simpleCalculatorActions.add());
+    dispatch(actionCreators.add());
   },
   substract: () => {
-    dispatch(simpleCalculatorActions.substract());
+    dispatch(actionCreators.substract());
   }
 });
 

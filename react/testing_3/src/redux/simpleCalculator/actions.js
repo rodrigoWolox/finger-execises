@@ -1,10 +1,11 @@
-export const actionTypes = {
+export const actions = {
   ADD: "ADD",
   SUBSTRACT: "SUBSTRACT"
 };
 
-export const simpleCalculatorActions = {
-  add: () => ({ type: actionTypes.ADD }),
-  substract: () => ({ type: actionTypes.SUBSTRACT })
+const actionCreators = {
+  add: () => ({ type: actions.ADD }),
+  substract: () => ({ type: actions.SUBSTRACT })
 };
-export default simpleCalculatorActions;
+
+export default actionCreators;
