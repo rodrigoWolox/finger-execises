@@ -1,6 +1,6 @@
 export const actions = {
-  ADD: "ADD",
-  SUBSTRACT: "SUBSTRACT"
+  ADD: 'ADD',
+  SUBSTRACT: 'SUBSTRACT'
 };
 
 const actionCreators = {

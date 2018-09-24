@@ -1,6 +1,6 @@
-import { createStore } from "redux";
+import { createStore } from 'redux';
 
-import reducer from "./simpleCalculator/reducer";
+import reducer from './simpleCalculator/reducer';
 
 const store = createStore(
   reducer,

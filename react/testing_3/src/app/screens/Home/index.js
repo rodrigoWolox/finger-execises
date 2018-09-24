@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import logo from "../../../assets/logo.svg";
+import logo from '../../../assets/logo.svg';
 
-import SimpleCalculator from "../../components/SimpleCalculator";
+import SimpleCalculator from '../../components/SimpleCalculator';
 
-import "./styles.css";
+import './styles.css';
 
 class Home extends Component {
   render() {

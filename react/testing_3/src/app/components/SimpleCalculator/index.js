@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-import actionCreators from "../../../redux/simpleCalculator/actions";
+import actionCreators from '../../../redux/simpleCalculator/actions';
 
-import SimpleCalculator from "./layout";
+import SimpleCalculator from './layout';
 
 class SimpleCalculatorContainer extends Component {
   render() {

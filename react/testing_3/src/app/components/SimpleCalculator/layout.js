@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import { add, substract } from "./constants";
+import { add, substract } from './constants';
 
-import "./styles.css";
+import './styles.css';
 
 function SimpleCalculator({ onAdd, onSubstract, calculatorValue }) {
   return (

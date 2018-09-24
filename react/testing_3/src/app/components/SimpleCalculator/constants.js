@@ -1,3 +1,3 @@
-export const add = "Add";
+export const add = 'Add';
 
-export const substract = "Substract";
+export const substract = 'Substract';
