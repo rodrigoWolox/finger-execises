@@ -6,10 +6,12 @@ import { DATA } from './constants';
 import UserList from './components/UserList';
 
 class Dashboard extends Component {
-  state = { users: [] };
+  state = { users: DATA };
+
   componentDidMount() {
-    this.setState({ users: DATA });
+    console.log('Dashboard mounted!')
   }
+
   render() {
     return (
       <div className="App">

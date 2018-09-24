@@ -4,10 +4,10 @@ import UserRow from '../UserRow';
 import './styles.css';
 
 class UserList extends Component {
-  componentDidUpdate (){
+  componentDidUpdate() {
     console.log('UserList updated!');
   }
-  render (){
+  render() {
     return (
       <div className={`user-list`}>
         {this.props.users && this.props.users.map(user => <UserRow user={user} key={user.id} />)}
