@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -6,17 +6,14 @@ import actionCreators from '../../../redux/simpleCalculator/actions';
 
 import SimpleCalculator from './layout';
 
-class SimpleCalculatorContainer extends Component {
-
-  render() {
-    return (
-      <SimpleCalculator
-        calculatorValue={this.props.calculatorValue}
-        onAdd={this.props.add}
-        onSubstract={this.props.substract}
-      />
-    );
-  }
+function SimpleCalculatorContainer({ calculatorValue, add, substract }) {
+  return (
+    <SimpleCalculator
+      calculatorValue={calculatorValue}
+      onAdd={add}
+      onSubstract={substract}
+    />
+  );
 }
 
 const mapStateToProps = state => ({
