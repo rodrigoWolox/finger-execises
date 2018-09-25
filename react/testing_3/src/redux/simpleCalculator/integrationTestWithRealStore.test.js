@@ -12,22 +12,22 @@ import reducer from './reducer';
 configure({ adapter: new Adapter() });
 
 describe('Test - Store + reducer integration testing with real store', () => {
-    let store, wrapper;
+  let store, wrapper;
 
-    beforeEach(() => {
-        store = createStore(reducer);
-        wrapper = mount(<Provider store={store}><SimpleCalculator /></Provider>)
-    })
+  beforeEach(() => {
+    store = createStore(reducer);
+    wrapper = mount(<Provider store={store}><SimpleCalculator /></Provider>)
+  })
 
-    it('Check SimpleCalculator Prop matches store values after ADD action', () => {
-        store.dispatch(actionCreators.add());
-        wrapper.update();
-        expect(wrapper.find('SimpleCalculator').prop('calculatorValue')).toBe(1);
-    });
+  it('Check SimpleCalculator Prop matches store values after ADD action', () => {
+    store.dispatch(actionCreators.add());
+    wrapper.update();
+    expect(wrapper.find('SimpleCalculator').prop('calculatorValue')).toBe(1);
+  });
 
-    it('Check SimpleCalculator Prop matches store values after SUBSTRACT action', () => {
-        store.dispatch(actionCreators.substract());
-        wrapper.update();
-        expect(wrapper.find('SimpleCalculator').prop('calculatorValue')).toBe(-1);
-    });
+  it('Check SimpleCalculator Prop matches store values after SUBSTRACT action', () => {
+    store.dispatch(actionCreators.substract());
+    wrapper.update();
+    expect(wrapper.find('SimpleCalculator').prop('calculatorValue')).toBe(-1);
+  });
 });
