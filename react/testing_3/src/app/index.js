@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+import React from "react";
+import { Provider } from "react-redux";
 
-import store from '../redux/store';
+import store from "../redux/store";
 
-import Home from './screens/Home';
+import Home from "./screens/Home";
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Home />
-      </Provider>
-    );
-  }
+function App() {
+  return (
+    <Provider store={store}>
+      <Home />
+    </Provider>
+  );
 }
+
 
 export default App;
