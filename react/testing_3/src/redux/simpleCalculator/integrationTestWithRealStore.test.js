@@ -22,12 +22,9 @@ describe('Test - Store + reducer integration testing with real store', () => {
   it('Check SimpleCalculator Prop matches store values after ADD action', () => {
     store.dispatch(actionCreators.add());
     wrapper.update();
-    expect(wrapper.find('SimpleCalculator').prop('calculatorValue')).toBe(1);
   });
 
   it('Check SimpleCalculator Prop matches store values after SUBSTRACT action', () => {
-    store.dispatch(actionCreators.substract());
-    wrapper.update();
     expect(wrapper.find('SimpleCalculator').prop('calculatorValue')).toBe(-1);
   });
 });
