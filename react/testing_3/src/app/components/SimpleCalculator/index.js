@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import actionCreators from '../../../redux/simpleCalculator/actions';
 
 import SimpleCalculator from './layout';
 
 class SimpleCalculatorContainer extends Component {
+
   render() {
     return (
       <SimpleCalculator
@@ -21,14 +23,8 @@ const mapStateToProps = state => ({
   calculatorValue: state.calculatorValue
 });
 
-const mapDispatchToProps = dispatch => ({
-  add: () => {
-    dispatch(actionCreators.add());
-  },
-  substract: () => {
-    dispatch(actionCreators.substract());
-  }
-});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(actionCreators, dispatch);
 
 export default connect(
   mapStateToProps,
