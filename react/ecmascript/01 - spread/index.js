@@ -1,8 +1,7 @@
 import isArray from './utils';
 
 export function min(...args) {
-  let result;
-  // console.log(args);
+  let result = args;
   if (!args.length) {
     result = undefined;
   } else if (isArray(args)) {
@@ -11,14 +10,14 @@ export function min(...args) {
     } else {
       result = Math.min(...args);
     }
-  } else {
-    result = args;
   }
   return result;
 }
 
 export function copy(original) {
-  const chinese = { ...original };
-  // console.log(chinese);
-  return chinese;
+  return (isArray(original)) ? [...original] : { ...original };
+}
+
+export function reverseMerge() {
+
 }
