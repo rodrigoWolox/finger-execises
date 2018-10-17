@@ -2,7 +2,7 @@ import isArray from './utils';
 
 export function min(...args) {
   let result;
-  console.log(args);
+  // console.log(args);
   if (!args.length) {
     result = undefined;
   } else if (isArray(args)) {
@@ -17,6 +17,8 @@ export function min(...args) {
   return result;
 }
 
-export function copy() {
-
+export function copy(original) {
+  const chinese = { ...original };
+  // console.log(chinese);
+  return chinese;
 }
