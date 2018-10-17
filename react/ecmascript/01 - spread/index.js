@@ -18,6 +18,12 @@ export function copy(original) {
   return (isArray(original)) ? [...original] : { ...original };
 }
 
-export function reverseMerge() {
+export function reverseMerge(first, second) {
+  const reversed = [...second, ...first];
+  return reversed;
+}
 
+export function filterAttribs(attribs) {
+  const { a, b, ...filter } = { ...attribs };
+  return filter;
 }
