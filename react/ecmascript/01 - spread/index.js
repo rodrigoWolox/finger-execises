@@ -1,11 +1,16 @@
 import isArray from './utils';
 
-export function min(aPossibleArray) {
+export function min(...args) {
   let result;
-  if (isArray(aPossibleArray)) {
-    result = Math.min(...aPossibleArray);
+  console.log(args);
+  if (isArray(args)) {
+    if (isArray(args[0])) {
+      result = Math.min(...args[0]);
+    } else {
+      result = Math.min(...args);
+    }
   } else {
-    result = aPossibleArray;
+    result = args;
   }
   return result;
 }
